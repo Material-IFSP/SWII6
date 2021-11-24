@@ -48,7 +48,7 @@ namespace Tp03.Core.Services.ContainerServices
 
       fetchedContainers.ForEach(async container =>
       {
-        Thread.Sleep(50);
+        //Thread.Sleep(50);
         container.BillOfLading = await this._context.BillsOfLading
           .FirstOrDefaultAsync(billOfLading =>
             billOfLading.Id.Equals(container.BillOfLandingId)

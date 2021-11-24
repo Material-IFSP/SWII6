@@ -31,16 +31,16 @@ namespace Tp03.WebApplication
 
       services.AddDbContext<Tp03Context>(opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),  action => action.MigrationsAssembly("Tp03.WebApplication")));
 
-      services.AddScoped<Tp03Context>();
+      services.AddTransient<Tp03Context>();
 
-      services.AddScoped<AddContainerService>();
-      services.AddScoped<DeleteContainerService>();
-      services.AddScoped<ListContainerService>();
-      services.AddScoped<UpdateContainerService>();
-      services.AddScoped<AddBillOfLadingService>();
-      services.AddScoped<DeleteBillOfLadingService>();
-      services.AddScoped<ListBillOfLadingService>();
-      services.AddScoped<UpdateBillOfLadingService>();
+      services.AddTransient<AddContainerService>();
+      services.AddTransient<DeleteContainerService>();
+      services.AddTransient<ListContainerService>();
+      services.AddTransient<UpdateContainerService>();
+      services.AddTransient<AddBillOfLadingService>();
+      services.AddTransient<DeleteBillOfLadingService>();
+      services.AddTransient<ListBillOfLadingService>();
+      services.AddTransient<UpdateBillOfLadingService>();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,2 @@
+docker build -t dockertutorial . 
+docker run -d -t 80:80 \ --name docker-tutorial docker101tutorial
