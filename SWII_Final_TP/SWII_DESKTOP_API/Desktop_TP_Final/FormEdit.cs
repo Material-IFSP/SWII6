@@ -1,4 +1,5 @@
 ﻿using Desktop_TP_Final.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Desktop_TP_Final
 {
@@ -35,8 +37,8 @@ namespace Desktop_TP_Final
             using (var client = new HttpClient())
             {
 
-
-                HttpResponseMessage responseMessage = await client.PutAsJsonAsync(URI, prod);
+                StringContent content = new StringContent(JsonConvert.SerializeObject(prod), Encoding.UTF8, "application/json");
+                HttpResponseMessage responseMessage = await client.PutAsync(URI, content);
                 if (responseMessage.IsSuccessStatusCode)
                 {
                     MessageBox.Show("Usuário atualizado");
