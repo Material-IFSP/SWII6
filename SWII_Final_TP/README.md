@@ -1,5 +1,5 @@
 # Trabalho Prático Final
-## Autores: Renato Santos e Fernando Avelino
+## Autores: Renato Santos e Grazielle da Silva Ribeiro 
 Trabalho efetuado para a disciplina de Sistemas Web 2.
 
 ### Contém
